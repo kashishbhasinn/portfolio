@@ -66,7 +66,7 @@ with st.sidebar:
     nav_option = st.radio("", ["About Me", "Skills", "Projects", "Why Me?", "Contact"])
     
     st.markdown("---")
-    st.markdown("###Progress")
+    st.markdown("Progress")
     progress = st.progress(0)
     if nav_option == "About Me":
         progress.progress(20)
