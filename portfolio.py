@@ -3,7 +3,7 @@ from streamlit.components.v1 import html
 
 # Set page config
 st.set_page_config(
-    page_title="Kashish Bhasin - Business Analyst Intern Application",
+    page_title="Kashish Bhasin",
     page_icon="📊",
     layout="wide"
 )
@@ -54,7 +54,7 @@ st.markdown("""
 col1, col2 = st.columns([3, 1])
 with col1:
     st.markdown('<div class="header">Kashish Bhasin</div>', unsafe_allow_html=True)
-    st.markdown('**Aspiring Business Analyst | Data-Driven Problem Solver**')
+    st.markdown('**AI Engineer**')
     st.markdown('*BTech in Computer Science with AI/ML specialization with hands-on projects in data analysis, process optimization, and AI automation*')
 
 with col2:
@@ -63,10 +63,10 @@ with col2:
 # Navigation Sidebar
 with st.sidebar:
     st.markdown("## Navigation")
-    nav_option = st.radio("", ["About Me", "Skills", "Projects", "Why LithionPower?", "Contact"])
+    nav_option = st.radio("", ["About Me", "Skills", "Projects", "Why Me?", "Contact"])
     
     st.markdown("---")
-    st.markdown("### Application Progress")
+    st.markdown("###Progress")
     progress = st.progress(0)
     if nav_option == "About Me":
         progress.progress(20)
@@ -74,7 +74,7 @@ with st.sidebar:
         progress.progress(40)
     elif nav_option == "Projects":
         progress.progress(60)
-    elif nav_option == "Why LithionPower?":
+    elif nav_option == "Why Me?":
         progress.progress(80)
     else:
         progress.progress(100)
@@ -86,7 +86,8 @@ if nav_option == "About Me":
     st.markdown("""
     <div class="highlight">
         <ul>
-            <li>Pursuing BTech in Computer Science Engineering with AI/ML specialization at Manipal University Jaipur (CGPA: 9.29)</li>
+            <li>Hi, I'm Kashish - an AI and product enthusiast</li>
+            <li>Pursuing BTech in Computer Science Engineering with AI/ML specialization (CGPA: 9.29)</li>
             <li>Strong analytical skills demonstrated through multiple internships (DRDO, IIM Bangalore) and AI projects with measurable impact</li>
             <li>Eager to apply my technical skills in Python, data analysis, and process optimization to business challenges</li>
         </ul>
@@ -98,7 +99,8 @@ if nav_option == "About Me":
         st.markdown("""
         - **BTech in Computer Science Engineering - AI/ML**  
           *Manipal University Jaipur* | Sept 2022 - Present  
-          CGPA: 9.29 | Relevant Coursework: Machine Learning, NLP, Data Mining, Algorithms, DBMS
+          Dean's List of Excellence Awardee | CGPA: 9.29
+          Relevant Coursework: Machine Learning, NLP, Data Mining, Algorithms, DBMS, Computer Architecture
         
         - **Lotus Valley International School, Noida**  
           Class 12: 93.8% | Class 10: 94.6%
@@ -187,42 +189,41 @@ elif nav_option == "Projects":
         </div>
         """, unsafe_allow_html=True)
 
-# Why LithionPower Section
-elif nav_option == "Why LithionPower?":
-    st.markdown('<div class="section-header">Why LithionPower?</div>', unsafe_allow_html=True)
-    
+elif nav_option == "Why Me?":
+    st.markdown('<div class="section-header">Why Me?</div>', unsafe_allow_html=True)
+
     st.markdown("""
     <div class="highlight">
-        <p>Your focus on <strong>operational efficiency</strong> in the energy sector aligns perfectly with my experience in:</p>
+        <p>I bring a unique mix of <strong>technical expertise</strong>, <strong>strategic thinking</strong>, and <strong>operational execution</strong> that makes me well-suited for high-impact roles. My experience spans:</p>
         <ul>
-            <li>Process optimization (reducing manual processing time by 50% at IIM Bangalore)</li>
-            <li>Data-driven decision making (delivered analytical reports improving strategic alignment by 23%)</li>
-            <li>AI-powered automation (developed systems that improved efficiency by 35-40% in multiple projects)</li>
+            <li><strong>Process innovation</strong> – Reduced manual efforts by up to 50% through workflow redesign</li>
+            <li><strong>Data-driven insights</strong> – Created dashboards and analyses that improved KPIs by 20-30%</li>
+            <li><strong>AI/ML implementation</strong> – Built real-world models and APIs improving productivity and automation</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
-    
-    st.markdown("### How I Can Contribute")
-    
-    with st.expander("Process Optimization"):
+
+    st.markdown("### What I Bring to the Table")
+
+    with st.expander("Process Innovation"):
         st.markdown("""
-        - Experience redesigning workflows at Arogo AI and IIM Bangalore
-        - Strong background in identifying inefficiencies and implementing solutions
-        - Technical skills to automate repetitive tasks and processes
+        - Proven record of streamlining operations at IIM Bangalore and DRDO
+        - Experience re-engineering processes to enhance speed, accuracy, and scalability
+        - Automation-first mindset with hands-on scripting and systems knowledge
         """)
-    
-    with st.expander("Data Analysis & Reporting"):
+
+    with st.expander("Analytical Thinking & Reporting"):
         st.markdown("""
-        - Built data pipelines that reduced processing time by 50%
-        - Created dashboards and reports that improved decision-making
-        - Experience with both technical and business stakeholders
+        - Developed custom dashboards for performance tracking and business reporting
+        - Skilled at translating raw data into actionable insights
+        - Effective at aligning analytics with both technical and strategic goals
         """)
-    
-    with st.expander("Technical Implementation"):
+
+    with st.expander("AI/ML Projects"):
         st.markdown("""
-        - Hands-on experience implementing AI/ML solutions in real-world scenarios
-        - Ability to bridge the gap between technical teams and business needs
-        - Quick learner able to adapt to new tools and technologies
+        - Delivered NLP, sentiment analysis, and generative AI solutions across domains
+        - Comfortable deploying models with frameworks like LangChain, HuggingFace, and FastAPI
+        - Bridging research and implementation with clarity and speed
         """)
 
 # Contact Section
